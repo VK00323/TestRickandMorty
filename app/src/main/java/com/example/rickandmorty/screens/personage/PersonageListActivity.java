@@ -27,7 +27,7 @@ public class PersonageListActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         recyclerViewPersonage = findViewById(R.id.recyclerViewPersonage);
         adapter = new PersonageAdapter();
-        adapter.setPersonages(new ArrayList<Personage>());
+        adapter.setPersonages(new ArrayList<>());
         recyclerViewPersonage.setLayoutManager(new LinearLayoutManager(this));
         recyclerViewPersonage.setAdapter(adapter);
         viewModel = ViewModelProviders.of(this).get(PersonageViewModel.class);

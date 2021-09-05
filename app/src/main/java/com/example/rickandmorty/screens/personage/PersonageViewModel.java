@@ -2,13 +2,11 @@ package com.example.rickandmorty.screens.personage;
 
 import android.app.Application;
 import android.os.AsyncTask;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.lifecycle.AndroidViewModel;
 import androidx.lifecycle.LiveData;
 
-import com.example.rickandmorty.screens.personage.PersonageListActivity;
 import com.example.rickandmorty.adapters.PersonageAdapter;
 import com.example.rickandmorty.api.ApiFactory;
 import com.example.rickandmorty.api.ApiService;
@@ -26,7 +24,7 @@ import io.reactivex.schedulers.Schedulers;
 
 public class PersonageViewModel extends AndroidViewModel {
     private static AppDatabase db;
-    private LiveData<List<Personage>> personages;
+    private final LiveData<List<Personage>> personages;
     private Disposable disposable;
     private PersonageAdapter adapter;
 
@@ -81,7 +79,7 @@ public class PersonageViewModel extends AndroidViewModel {
                 .observeOn(AndroidSchedulers.mainThread())
                 .subscribe(new Consumer<Example>() {
                     @Override
-                    public void accept(Example example) throws Exception {
+                    public void accept(Example example) {
                         deleteAllPersonage();
                         insertPersonages(example.getResults());
                     }

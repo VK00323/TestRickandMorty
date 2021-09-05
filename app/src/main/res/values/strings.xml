@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">Rick and Morty</string>
+    <string name="name">Name:</string>
+    <string name="status">Status:</string>
+    <string name="species">Species:</string>
+    <string name="gender">Gender:</string>
+    <string name="textview">TextView</string>
+    <string name="avatar">avatar</string>
 </resources>
