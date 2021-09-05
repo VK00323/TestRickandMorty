@@ -16,9 +16,6 @@ import java.util.List;
 
 public class PersonageAdapter extends RecyclerView.Adapter<PersonageAdapter.PersonageViewHolder> {
 
-    public List<Personage> getPersonages() {
-        return personages;
-    }
 
     @SuppressLint("NotifyDataSetChanged")
     public void setPersonages(List<Personage> personages) {

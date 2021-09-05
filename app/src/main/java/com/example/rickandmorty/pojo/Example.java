@@ -7,22 +7,18 @@ public class Example {
     @Expose
     private Personage personage;
     @Expose
-    private List<Personage> results = null;
+    private final List<Personage> results = null;
 
     public Personage getPersonage() {
         return personage;
-    }
-
-    public void setInfo(Personage personage) {
-        this.personage = personage;
     }
 
     public List<Personage> getResults() {
         return results;
     }
 
-    public void setResults(List<Personage> results) {
-        this.results = results;
-    }
 
+    public void setPersonage(Personage personage) {
+        this.personage = personage;
+    }
 }

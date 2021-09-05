@@ -7,7 +7,6 @@ import androidx.annotation.NonNull;
 import androidx.lifecycle.AndroidViewModel;
 import androidx.lifecycle.LiveData;
 
-import com.example.rickandmorty.adapters.PersonageAdapter;
 import com.example.rickandmorty.api.ApiFactory;
 import com.example.rickandmorty.api.ApiService;
 import com.example.rickandmorty.data.AppDatabase;
@@ -22,11 +21,11 @@ import io.reactivex.functions.Consumer;
 import io.reactivex.schedulers.Schedulers;
 
 
+@SuppressWarnings("ALL")
 public class PersonageViewModel extends AndroidViewModel {
     private static AppDatabase db;
     private final LiveData<List<Personage>> personages;
     private Disposable disposable;
-    private PersonageAdapter adapter;
 
 
     public PersonageViewModel(@NonNull Application application) {
@@ -86,6 +85,7 @@ public class PersonageViewModel extends AndroidViewModel {
                 }, new Consumer<Throwable>() {
                     @Override
                     public void accept(Throwable throwable) throws Exception {
+
                     }
                 });
 
